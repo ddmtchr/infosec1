@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS posts (
+    id BIGSERIAL PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    content VARCHAR(2000) NOT NULL,
+    author VARCHAR(255) NOT NULL
+    );
