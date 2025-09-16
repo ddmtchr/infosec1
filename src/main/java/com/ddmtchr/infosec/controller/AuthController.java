@@ -1,6 +1,7 @@
 package com.ddmtchr.infosec.controller;
 
 import com.ddmtchr.infosec.dto.JwtResponseDto;
+import com.ddmtchr.infosec.dto.RefreshTokenDto;
 import com.ddmtchr.infosec.security.JwtProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +18,8 @@ public class AuthController {
     private final JwtProvider jwtProvider;
 
     @PostMapping("/refresh")
-    public ResponseEntity<JwtResponseDto> refreshToken(@RequestBody String refreshToken) {
-        return jwtProvider.refreshTokens(refreshToken)
+    public ResponseEntity<JwtResponseDto> refreshToken(@RequestBody RefreshTokenDto refreshToken) {
+        return jwtProvider.refreshTokens(refreshToken.getRefreshToken())
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
