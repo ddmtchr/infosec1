@@ -48,3 +48,9 @@
   - По запросу на обновление токена выдается новый accessToken
 - Защита от SQL-инъекций - используется Spring Data и ORM Hibernate
 - Защита от XSS - экранирование специальных символов HTML в теле ответа с помощью HtmlUtils.htmlEscape() (в PostService)
+
+## Скриншоты dependency-check и spotbugs
+
+![dep-check](./src/main/resources/images/dep-check.png)
+
+![dep-check](./src/main/resources/images/spotbugs.png)
