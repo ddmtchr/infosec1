@@ -44,7 +44,7 @@ jobs:
         if: always()
         uses: jwgmeligmeyling/spotbugs-github-action@v1
         with:
-          report_paths: target/spotbugsXml.xml
+          path: target/spotbugsXml.xml
 
       - name: Upload OWASP Dependency-Check reports
         if: always()
